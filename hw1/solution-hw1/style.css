@@ -1,0 +1,64 @@
+p {
+    font-family: sans-serif;
+    color: black;
+    text-align: center;
+    font-weight: 100;
+    font-size: large;
+}
+
+.logo {
+    padding-left: 15px;
+    padding-top: 30px;
+}
+
+span:hover {
+    background-color: yellow;
+    font-weight: 800;
+}
+
+/* span {
+    font-family: sans-serif;
+    color: black;
+    text-align: center;
+    font-weight: 100;
+    font-size: large;
+} */
+
+h1 {
+    font-family: sans-serif;
+    color: black;
+    text-align: center;
+    font-weight: 100;
+    font-size: x-large;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 17%;
+}
+
+#border {
+    border: 2px solid black;
+}
+
+.container:hover {
+    background-color: yellow;
+    padding-top: 5px;
+    padding-bottom: 0px;
+}
+
+/* div.item {
+    display: inline-block;
+    text-align: auto;
+}
+.caption {
+    display: block;
+    text-align: left;
+    padding: 10px;
+} */
+
+.container {
+    width: 100%;
+}
