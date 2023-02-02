@@ -1,121 +1,189 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <meta charset="UTF-8">
   <title>Bun Bun Bake Shop</title>
   
-<head>
-  <link rel="stylesheet" type="text/css" href="style.css"
-</head>
+  <head>
+    <link rel="stylesheet" type="text/css" href="style.css"
+  </head>
 
   <body>
 
-    <img src="./images/logo-01.svg"
+    <a href="gallery.html">
+      <img src="./images/logo-01.svg"
         width="300"
         alt="Bun Bun Bake Shop Logo"
         class="logo"
-    />
+     />
+    </a>
+
+    <hr>
 
     <nav>
       
-        <p  class="navigation"><span>PRODUCTS</span></p>
+        <p class="navigation">
+          <a href="gallery.html">
+            <span>PRODUCTS</span>
+          </a>
+        </p>
     
       
-        <p class="navigation"><span>CART</span></p>
+        <p class="navigation">
+          <a href="cart.html">
+            <span>CART</span>
+          </a>
+        </p>
       
     </nav>
 
     <br>
-
     <br>
 
     <h1>Our hand-made cinnamon rolls</h1>
 
     <br>
 
-    <div class="container">
-      <img src="./images/original-cinnamon-roll.jpeg"
-      alt="original cinnamon roll"
-      class="center"
-      id="border"
-      />
+<!-- first image formatting using flexbox. 1 parent 3 children and the middle child has the image and paragraph text inside-->
 
-      <p>Original cinnamon roll<br>$2.49
-      </p>
+    <div class="row">
+      <div class="empty">
+        <!-- leave empty -->
+      </div>
+
+      <div class="container">
+        <a href="detail.html">
+        <img src="./images/original-cinnamon-roll.jpeg"
+        alt="original cinnamon roll"
+        class="imgformat"
+        />
+        </a>
+
+        <p class="caption"><a href="detail.html"><span>Original cinnamon roll</span><br>$ 2.49</a></p>
+      </div>
+      
+      <div class="empty">
+        <!-- leave empty -->
+      </div>
     </div>
 
     <br>
 
-    <div class="container">
-      <img src="./images/apple-cinnamon-roll.jpeg"
-      alt="apple cinnamon roll"
-      class="center"
-      id="border"
-      />
+    <div class="row">
+      <div class="empty">
+        <!-- leave empty -->
+      </div>
 
-      <p>Apple cinnamon roll<br>$3.49
-      </p>
+      <div class="container">
+        <a href="detail.html">
+        <img src="./images/apple-cinnamon-roll.jpeg"
+        alt="apple cinnamon roll"
+        class="imgformat"
+        />
+        </a>
+
+        <p class="caption">
+          <a href="detail.html"><span>Apple cinnamon roll</span><br>$ 3.49</a>
+        </p>
+      </div>
+
+      <div class="empty">
+        <!-- leave empty -->
+      </div>
     </div>
 
     <br>
 
-    <!-- <div class="item">
-      <img src="./images/original-cinnamon-roll.jpeg"
-      alt="original cinnamon roll"
-      class="center"
-      id="border"/>
-      <span class="caption">Original cinnamon roll<br>$2.49</span>
-  </div> -->
+    <div class="row">
+      <div class="empty">
+      <!-- leave empty -->
+      </div>
 
-  <div class="container">
-    <img src="./images/raisin-cinnamon-roll.jpeg"
-    alt="raisin cinnamon roll"
-    class="center"
-    id="border"
-    />
+      <div class="container">
+        <a href="detail.html">
+        <img src="./images/raisin-cinnamon-roll.jpeg"
+        alt="raisin cinnamon roll"
+        class="imgformat"
+        />
+        </a>
 
-    <p>Raisin cinnamon roll<br>$2.99
-    </p>
-  </div>
+        <p class="caption"><a href="detail.html"><span>Raisin cinnamon roll</span><br>$ 2.99</a></p>
+      </div>
 
+      <div class="empty">
+        <!-- leave empty -->
+      </div>
+    </div>
 
-  <br>
+    <br>
 
-  <div class="container">
-    <img src="./images/walnut-cinnamon-roll.jpeg"
-    alt="walnut cinnamon roll"
-    class="center"
-    id="border"
-    />
+    <div class="row">
+      <div class="empty">
+        <!-- leave empty -->
+      </div>
 
-    <p>Walnut cinnamon roll<br>$3.49
-    </p>
-  </div>
+      <div class="container">
+        <a href="detail.html">
+        <img src="./images/walnut-cinnamon-roll.jpeg"
+        alt="walnut cinnamon roll"
+        class="imgformat"
+        />
+        </a>
 
-  <br>
+        <p class="caption"><a href="detail.html"><span>Walnut cinnamon roll</span><br>$ 3.49</a></p>
+      </div>
 
-  <div class="container">
-    <img src="./images/double-chocolate-cinnamon-roll.jpeg"
-    alt="double chocolate cinnamon roll"
-    class="center"
-    id="border"
-    />
+      <div class="empty">
+        <!-- leave empty -->
+      </div>
+    </div>
 
-    <p>Double-chocolate cinnamon roll<br>$3.99
-    </p>
-  </div>
+    <br>
 
-  <br>
+    <div class="row">
+      <div class="empty">
+        <!-- leave empty -->
+      </div>
 
-  <div class="container">
-    <img src="./images/strawberry-cinnamon-roll.jpeg"
-    alt="strawberry cinnamon roll"
-    class="center"
-    id="border"
-    />
+      <div class="container">
+        <a href="detail.html">
+        <img src="./images/double-chocolate-cinnamon-roll.jpeg"
+        alt="double chocolate cinnamon roll"
+        class="imgformat"
+        />
+        </a>
 
-    <p>Strawberry cinnamon roll<br>$3.99
-    </p>
-  </div>
+        <p class="caption"><a href="detail.html"><span>Double-chocolate<br>cinnamon roll</span><br>$ 3.99</a></p>
+      </div>
+
+      <div class="empty">
+        <!-- leave empty -->
+      </div>
+    </div>
+
+    <br>
+
+    <div class="row">
+      <div class="empty">
+        <!-- leave empty -->
+      </div>
+
+      <div class="container">
+        <a href="detail.html">
+        <img src="./images/strawberry-cinnamon-roll.jpeg"
+        alt="strawberry cinnamon roll"
+        class="imgformat"
+        />
+        </a>
+
+        <p class="caption"><a href="detail.html"><span>Strawberry cinnamon roll</span><br>$ 3.99</a></p>
+      </div>
+      
+      <div class="empty">
+          <!-- leave empty -->
+      </div>
+    </div>
     
   </body>
+
 </html>

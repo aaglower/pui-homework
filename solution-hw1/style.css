@@ -1,29 +1,32 @@
-p {
+hr{
+    border: 2px solid black
+}
+
+/* makes formatting for links the same as for paragraphs and regular text */
+/* makes all paragraph text the same font and size */
+p, a {
     font-family: sans-serif;
     color: black;
     text-align: center;
     font-weight: 100;
     font-size: large;
+    text-decoration: none;
 }
 
+/* fits the logo properly */
 .logo {
     padding-left: 15px;
     padding-top: 30px;
+    padding-bottom: 15px;
 }
 
+/* when you hover over specific paragraph text it bolds */
 span:hover {
     background-color: yellow;
     font-weight: 800;
 }
 
-/* span {
-    font-family: sans-serif;
-    color: black;
-    text-align: center;
-    font-weight: 100;
-    font-size: large;
-} */
-
+/* formatting for our hand-made cinnamon rolls */
 h1 {
     font-family: sans-serif;
     color: black;
@@ -32,37 +35,43 @@ h1 {
     font-size: x-large;
 }
 
-.center {
+/* centers and adds a border to each image */
+.imgformat {
     display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 17%;
-}
-
-#border {
+    width: 100%;
     border: 2px solid black;
 }
 
+/* to underline only the caption text not the numbers or the navigation text*/
+div span {
+    text-decoration: underline;
+}
+
+/* flexbox guidelines they center and make a 2:1:2 ratio for the 3 divs */
+.row {
+    display: flex;
+    justify-content: center;
+    align-content: space-between;
+}
+
+.empty {
+    flex: 2;
+}
+
+.container {
+    flex: 1;
+}
+
+/* when you hover over the containers div this adds a yellow background color */
 .container:hover {
     background-color: yellow;
-    padding-top: 5px;
-    padding-bottom: 0px;
+    padding: 8px;
 }
 
-/* div.item {
-    display: inline-block;
-    text-align: auto;
-}
-.caption {
-    display: block;
+/* this makes the text left alight with picture and also adjusts the space of yellow background around the picture. couldn't get it exactly right, tried adjusting a lot */
+.caption{
+    margin-top: 8px;
+    margin-bottom: 0px;
     text-align: left;
-    padding: 10px;
-} */
+}
 
-/* * {
-    box-sizing: border-box;
-} */
-
-/* .container {
-    width: 100%;
-} */
