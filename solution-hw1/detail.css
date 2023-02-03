@@ -64,5 +64,29 @@ h1 {
     padding: 8px;
 } */
 
-/* this makes the text left alight with picture and also adjusts the space of yellow background around the picture. couldn't get it exactly right, tried adjusting a lot */
+.middlesec {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    column-gap: 50px;
+}
 
+.price {
+    flex: 0 0 auto;
+}
+
+.addtocart {
+    flex: 1 0 auto;
+    border: 2px solid black;
+}
+
+#price {
+    text-align: center;
+    font-weight: 500;
+    font-size: medium;
+    margin: 6px;
+}
+
+.addtocart:hover {
+    background-color: yellow;
+}
