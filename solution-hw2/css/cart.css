@@ -1,0 +1,110 @@
+hr{
+    border: 2px solid black
+}
+
+/* makes formatting for links the same as for paragraphs and regular text */
+/* makes all paragraph text the same font and size */
+p, a {
+    font-family: sans-serif;
+    color: black;
+    text-align: center;
+    font-weight: 100;
+    font-size: large;
+    text-decoration: none;
+}
+
+/* fits the logo properly */
+.logo {
+    padding-left: 15px;
+    padding-top: 30px;
+    padding-bottom: 15px;
+}
+
+/* when you hover over specific paragraph text it bolds */
+span:hover {
+    background-color: yellow;
+    font-weight: 800;
+}
+
+/* formatting for our hand-made cinnamon rolls */
+h2 {
+    font-family: sans-serif;
+    color: black;
+    text-align: center;
+    font-weight: 100;
+    font-size: x-large;
+}
+
+h1 {
+    font-family: sans-serif;
+    color: black;
+    text-align: left;
+    font-weight: 100;
+    font-size: x-large;
+}
+
+/* centers and adds a border to each image */
+.imgformat {
+    border: 2px solid black;
+    width: 7%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.remove {
+    font-size: xx-small;
+}
+
+.order {
+    font-size:large;
+}
+
+/* using the same code for the checkout button text and also the line above it to style  */
+
+#checkoutline {
+    border: 2px solid black;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#checkout {
+    border: 2px solid black;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5%;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 50px;
+}
+
+.column {
+    width: 20%;
+}
+
+p#checkout:hover {
+    background-color: yellow;
+}
+
+/* everything for the header starts now */
+.header {
+    display: flex;
+    column-gap: 20px;
+}
+
+.image {
+    flex: 0 1 auto;
+}
+
+.righthand {
+    flex: 1 0 auto;
+}
+
+.makenavright {
+    text-align: right;
+}
