@@ -7,7 +7,7 @@ hr{
 p, a {
     font-family: sans-serif;
     color: black;
-    text-align: center;
+    text-align: left;
     font-weight: 100;
     font-size: large;
     text-decoration: none;
@@ -46,10 +46,10 @@ h1 {
 /* centers and adds a border to each image */
 .imgformat {
     border: 2px solid black;
-    width: 7%;
+    width: 50%;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+    /* margin-left: auto;
+    margin-right: auto; */
 }
 
 .remove {
@@ -64,20 +64,20 @@ h1 {
 
 #checkoutline {
     border: 2px solid black;
-    width: 60%;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
 }
 
 #checkout {
     border: 2px solid black;
-    width: 60%;
+    width: 17%;
     margin-left: auto;
     margin-right: auto;
-    padding: 5%;
+    padding: 2%;
 }
 
-.row {
+/* .row {
     display: flex;
     justify-content: space-between;
     column-gap: 50px;
@@ -85,7 +85,7 @@ h1 {
 
 .column {
     width: 20%;
-}
+} */
 
 p#checkout:hover {
     background-color: yellow;
@@ -107,4 +107,39 @@ p#checkout:hover {
 
 .makenavright {
     text-align: right;
+}
+
+/* new cart body starts now */
+
+
+.emptycolumn {
+    width: 28%
+}
+
+.row1, .row2, .row3, .row4 , .row5{
+    display: flex;
+}
+
+.column1 {
+    flex: 1;
+}
+
+.column2 {
+    flex: 2;
+}
+
+.column3 {
+    flex: 1;
+}
+
+.linecolumn {
+    width: 70%;
+}
+
+.emptycheckout {
+    width: 80%;
+}
+
+.checkout {
+    width: 60%;
 }
