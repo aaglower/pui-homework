@@ -38,7 +38,7 @@ h1 {
 /* centers and adds a border to each image */
 .imgformat {
     border: 2px solid black;
-    width: 40%;
+    width: 220%;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -52,6 +52,14 @@ h1 {
 
 .column {
     width: 20%
+}
+
+.empty {
+    width: 0%
+}
+
+.textrow {
+    display:flex;
 }
 
 .caption{
