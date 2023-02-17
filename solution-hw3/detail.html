@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <meta charset="UTF-8">
+  <title>Original Cinnamon Roll</title>
+  
+  <head>
+    <link rel="stylesheet" type="text/css" href="./css/detail.css">
+  </head>
+
+  <body>
+
+    <div class="header">
+      <div class="image">
+        <a href="index.html">
+          <img src="./images/logo-01.svg"
+            width="300"
+            alt="Bun Bun Bake Shop Logo"
+            class="logo"
+          />
+        </a>
+      </div>
+
+      <!-- splits entire top into two so that u can have image and then everything on the side. the image is in class image and everything else is in class righthand -->
+      <div class="righthand">
+        <!-- separates everything on the righthand side into 3 stacked boxes: navigation, line, and h1text -->
+        <div class="navigation">
+          <nav>
+      
+            <p class="makenavright">
+              <a href="index.html">
+                <span>PRODUCTS</span>
+              </a>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <a href="cart.html">
+                <span> CART</span>
+              </a>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </p>
+          
+          </nav>
+        </div>
+
+        <br>
+
+        <div class="line">
+          <hr>
+        </div>
+
+        <br>
+        <br>
+        <br>
+
+        <div class="h1text">
+          <h1>Original cinnamon roll</h1>
+        </div>
+
+
+      </div>
+
+    </div>
+
+    <br>
+    <br>
+
+    <!-- starting the 5 flexboxes here -->
+
+    <div class="row">
+
+      <div class="empty">
+        <!-- leave empty -->
+      </div>
+
+      <div class="column">
+        <img
+          src="./images/original-cinnamon-roll.jpeg"
+          alt="original cinnamon roll"
+          class="imgformat"
+        />
+      </div>
+
+      <div class="empty">
+        <!-- leave empty -->
+      </div>
+
+      <!-- does the caption and the dropdowns at the right side and everything -->
+      <div class="column">
+            
+        <!-- paragraph text and two dropdowns here -->
+        <div class="textrow">
+          <div class="textcolumn">
+            <!-- leave empty -->
+          </div>
+
+          <div class="textcolumn">
+            <p class="caption">Customize our delicious, hand-made cinnamon roll to your liking!</p>
+            <br>
+
+            <div>
+              <label for="Glazing">Glazing</label>
+              <br>
+              <select name="Glazing" id="Glazing">
+                <option value="Keep original">Keep original</option>
+                <option value="Sugar milk">Sugar milk</option>
+                <option value="Vanilla milk">Vanilla milk</option>
+                <option value="Double chocolate">Double chocolate</option>
+              </select>
+            </div>
+
+            <br>
+
+            <div>
+              <label for="Pack Size">Pack Size</label>
+              <br>
+              <select name="Pack Size" id="Pack Size">
+                <option value="1">1</option>
+                <option value="3">3</option>
+                <option value="6">6</option>
+                <option value="12">12</option>
+              </select>
+            </div>
+
+          </div>
+          
+          <div class="textcolumn">
+            <!-- leave empty -->
+          </div>
+        </div>
+
+        <br>
+        <br>
+
+        <!-- flexbox with price and add to cart button here -->
+        <div class="textrow">
+          <div class="textcolumn">
+            <!-- leave empty -->
+          </div>
+
+          <div class="textcolumn">
+            <div class = middlesec>
+              <div class="price">
+                <p id="price">$ 2.49</p>
+              </div>
+
+              <div class="addtocart">
+                <p id="price">Add to Cart</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="textcolumn">
+            <!-- leave empty -->
+          </div>
+        </div>
+      </div>
+
+      <div class="empty">
+        <!-- leave empty -->
+      </div>
+
+    </div>
+
+  </body>
+</html>

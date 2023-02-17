@@ -1,0 +1,118 @@
+hr{
+    border: 2px solid black
+}
+
+/* makes formatting for links the same as for paragraphs and regular text */
+/* makes all paragraph text the same font and size */
+p, a {
+    font-family: sans-serif;
+    color: black;
+    text-align: center;
+    font-weight: 100;
+    font-size: large;
+    text-decoration: none;
+}
+
+/* fits the logo properly */
+.logo {
+    padding-left: 15px;
+    padding-top: 30px;
+    padding-bottom: 15px;
+}
+
+/* when you hover over specific paragraph text it bolds */
+span:hover {
+    background-color: yellow;
+    font-weight: 800;
+}
+
+/* formatting for our hand-made cinnamon rolls */
+h1 {
+    font-family: sans-serif;
+    color: black;
+    text-align: left;
+    font-weight: 100;
+    font-size: x-large;
+}
+
+/* centers and adds a border to each image */
+.imgformat {
+    border: 2px solid black;
+    width: 220%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* this should create three columns for the flexbox so i can put the text and dropbox in the middle */
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.column {
+    width: 20%
+}
+
+.empty {
+    width: 0%
+}
+
+.textrow {
+    display:flex;
+}
+
+.caption{
+    text-align: left;
+} 
+
+/* when you hover over the containers div this adds a yellow background color
+.container:hover {
+    background-color: yellow;
+    padding: 8px;
+} */
+
+.middlesec {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    column-gap: 50px;
+}
+
+.price {
+    flex: 0 0 auto;
+}
+
+.addtocart {
+    flex: 1 0 auto;
+    border: 2px solid black;
+}
+
+#price {
+    text-align: center;
+    font-weight: 500;
+    font-size: medium;
+    margin: 6px;
+}
+
+.addtocart:hover {
+    background-color: yellow;
+}
+
+/* everything for the header starts now */
+.header {
+    display: flex;
+    column-gap: 20px;
+}
+
+.image {
+    flex: 0 1 auto;
+}
+
+.righthand {
+    flex: 1 0 auto;
+}
+
+.makenavright {
+    text-align: right;
+}
