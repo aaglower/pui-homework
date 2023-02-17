@@ -98,7 +98,7 @@
             <div>
               <label for="Glazing">Glazing</label>
               <br>
-              <select name="Glazing" id="Glazing">
+              <select name="Glazing" id="Glazing" onchange="glazingchange(this)">
                 <option value="Keep original">Keep original</option>
                 <option value="Sugar milk">Sugar milk</option>
                 <option value="Vanilla milk">Vanilla milk</option>
@@ -111,7 +111,7 @@
             <div>
               <label for="Pack Size">Pack Size</label>
               <br>
-              <select name="Pack Size" id="Pack Size">
+              <select name="Pack Size" id="Pack Size" onchange="packsizechange">
                 <option value="1">1</option>
                 <option value="3">3</option>
                 <option value="6">6</option>
@@ -158,6 +158,8 @@
       </div>
 
     </div>
+
+    <script src="./js/behavior.js"></script>
 
   </body>
 </html>
