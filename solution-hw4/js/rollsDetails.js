@@ -25,15 +25,15 @@ const rolls = {
     }    
 };
 
-const queryString = window.location.search;
-const params = new URLSearchParams(queryString);
-const rollType = params.get('roll');
-
-const roll_info = rolls[rollType];
-const roll_base = Object.values(roll_info)[0];
-const roll_image = Object.values(roll_info)[1];
-
 function updateElement() {
+    const queryString = window.location.search;
+    const params = new URLSearchParams(queryString);
+    const rollType = params.get('roll');
+    
+    const roll_info = rolls[rollType];
+    const roll_base = Object.values(roll_info)[0];
+    const roll_image = Object.values(roll_info)[1];
+    
     const rollImageElement = document.querySelector('.product-image');
     const rollPriceElement = document.querySelector('.price');
 
@@ -41,12 +41,44 @@ function updateElement() {
     rollPriceElement.innerText = roll_base;
 }
 
-// need to call updateElement(); when user clicks on a details page <3 -Ria
+// the code above updates the details page based on what item you click on.
+// the code below attempts to update the cart page after you click the add to cart button however i've got bugs and i'm not sure my concept is entirely correct
 
-// following lab
-function addNewRoll(name, basePrice, imageFile) {
-    const notecard = new Notecard(imageURL, title, body);
-    notecardSet.add(notecard);
+class Roll {
+
+    constructor(rollType, rollGlazing, packSize, basePrice) {
+        this.type = rollType;
+        this.glazing =  rollGlazing;
+        this.size = packSize;
+        this.basePrice = basePrice;
+
+        this.element = null;
+    }
 }
 
 const cart = new Array(); 
+
+function addNewRoll(rollType, rollGlazing, packSize, basePrice) {
+    const roll = new Roll(rollType, rollGlazing, packSize, basePrice);
+    cart.push(roll);
+    return roll;
+}
+
+for (const roll of cart) {
+    createElement(roll);
+}
+
+function createElement(roll) {
+    const template = document.querySelector('#roll-template');
+    const clone = template.content.cloneNode(true);
+    roll.element = clone.querySelector('.cart-item');
+
+    addNewRoll();
+}
+
+btnAdd = document.querySelector('.addbtn');
+
+btnAdd.addEventListener("click", createElement);
+
+function createElement() {
+}
