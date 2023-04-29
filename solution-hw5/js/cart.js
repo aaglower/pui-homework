@@ -97,11 +97,15 @@ function renderRoll(roll) {
 function addtoCart(roll) {
     const cartElement = document.querySelector(".cart-wrapper");
     cartElement.appendChild(renderRoll(roll));
+    shoppingCart.push(roll);
+
+    localStorage.setItem('cart', JSON.stringify(cart));
 }
+  
 
 // function calculates the total price of all items in the cart by iterating through each roll object in shoppingCart array and adding up the price property of each roll. also updates the total price element in the HTML file with the new calculated total price
 function totalCost() {
-    const totalPriceElement = document.querySelector(".total-price");
+    const totalPriceElement = document.querySelector("p.total-price");
     const totalPrice = shoppingCart.reduce((total, roll) => total + roll.calculatedPrice, 0);
     totalPriceElement.innerText = `$ ${totalPrice.toFixed(2)}`;
 }
@@ -109,3 +113,81 @@ function totalCost() {
 fillCart();
 shoppingCart.forEach(addtoCart);
 totalCost();
+
+// NEW CODE FOR ASSIGNMENT 6
+
+// retrieve the cart from local storage or create an empty cart array
+let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+// function to populate the DOM with cart items
+function renderCart() {
+    const cartWrapper = document.querySelector('#cart-wrapper');
+    cartWrapper.innerHTML = '';
+  
+    let totalPrice = 0;
+  
+    cart.forEach((item, index) => {
+      const cartItem = document.createElement('div');
+      cartItem.classList.add('cart-item');
+  
+      const itemImage = document.createElement('img');
+      itemImage.src = item.image;
+      cartItem.appendChild(itemImage);
+  
+      const itemDetails = document.createElement('div');
+      itemDetails.classList.add('item-details');
+  
+      const itemName = document.createElement('h3');
+      itemName.textContent = item.name;
+      itemDetails.appendChild(itemName);
+  
+      if (item.price !== undefined) { // check if price is defined
+        const itemPrice = document.createElement('span');
+        itemPrice.classList.add('item-price');
+        itemPrice.textContent = `$${item.price.toFixed(2)}`;
+        itemDetails.appendChild(itemPrice);
+  
+        const itemQuantity = document.createElement('span');
+        itemQuantity.classList.add('item-quantity');
+        itemQuantity.textContent = `Qty: ${item.quantity}`;
+        itemDetails.appendChild(itemQuantity);
+  
+        const removeButton = document.createElement('a');
+        removeButton.classList.add('remove-item');
+        removeButton.textContent = 'Remove';
+        removeButton.href = '#';
+        removeButton.dataset.index = index;
+        itemDetails.appendChild(removeButton);
+      }
+  
+      cartItem.appendChild(itemDetails);
+      cartItemsContainer.appendChild(cartItem);
+  
+      if (item.price !== undefined) { // add to totalPrice only if price is defined
+        totalPrice += item.price * item.quantity;
+      }
+    });
+  
+    document.querySelector('p.total-price').textContent = `$${totalPrice.toFixed(2)}`;
+}
+  
+
+// render the initial cart items when the page loads
+window.addEventListener('load', renderCart);
+
+// handle click events on remove item links
+document.addEventListener('click', (event) => {
+  if (event.target.classList.contains('remove-item')) {
+    const itemIndex = parseInt(event.target.dataset.index);
+    
+    // remove the item from the cart array
+    cart.splice(itemIndex, 1);
+    
+    // save the updated cart to local storage
+    localStorage.setItem('cart', JSON.stringify(cart));
+    
+    // remove the corresponding entry from the DOM and update the total price
+    event.target.closest('.cart-item').remove();
+    renderCart();
+  }
+});
